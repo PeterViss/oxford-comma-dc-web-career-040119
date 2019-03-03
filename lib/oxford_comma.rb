@@ -1,11 +1,11 @@
 def oxford_comma(array)
   string = ""
   i = 0
-  if array.length == 1 
+  if array.length == 1
     return array[0]
-  elsif array.length == 2 
+  elsif array.length == 2
     return "#{array[0]} and #{array[1]}"
-  else 
+  else
     until i == array.length - 1
       string << "#{array[i]}, "
       i += 1
@@ -14,4 +14,3 @@ def oxford_comma(array)
     return string
   end
 end
-

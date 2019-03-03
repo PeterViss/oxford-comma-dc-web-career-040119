@@ -1,9 +1,17 @@
 def oxford_comma(array)
-  if array.size == 1
-    array.join
-  elsif array.size == 2
-    array.join(" and ")
-  else
-    array[0..-2].join(", ") + " and " + array[-1]
+  string = ""
+  i = 0
+  if array.length == 1 
+    return array[0]
+  elsif array.length == 2 
+    return "#{array[0]} and #{array[1]}"
+  else 
+    until i == array.length - 1
+      string << "#{array[i]}, "
+      i += 1
+    end
+    string << "and #{array[array.length-1]}"
+    return string
   end
 end
+
